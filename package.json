@@ -1,0 +1,103 @@
+{
+	"name": "rdtkls",
+	"description": "RDTK language support - VSCode language client for RDTK recipes",
+	"author": "Leroy Ruegemer",
+	"license": "GPL-3.0-or-later",
+	"version": "0.0.1",
+	"publisher": "RDTK",
+	"repository": {
+		"type": "git",
+		"url": "TODO"
+	},
+	"engines": {
+		"vscode": "^1.33.0"
+	},
+	"activationEvents": [
+		"onLanguage:project-recipe",
+		"onLanguage:distribution-recipe",
+		"onLanguage:template-recipe"
+	],
+	"main": "./out/extension",
+	"dependencies": {
+		"vscode-languageclient": "^5.2.1"
+	},
+	"contributes": {
+		"languages": [
+			{
+				"id": "project-recipe",
+				"aliases": [
+					"RDTK Project Recipe"
+				],
+				"extensions": [
+					".project"
+				],
+				"configuration": "./language-configuration.json"
+			},
+			{
+				"id": "distribution-recipe",
+				"aliases": [
+					"RDTK Distribution Recipe"
+				],
+				"extensions": [
+					".distribution"
+				],
+				"configuration": "./language-configuration.json"
+			},
+			{
+				"id": "template-recipe",
+				"aliases": [
+					"RDTK Template Recipe"
+				],
+				"extensions": [
+					".template"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "project-recipe",
+				"scopeName": "source.yaml",
+				"path": "./syntaxes/yaml.tmLanguage.json"
+			},
+			{
+				"language": "distribution-recipe",
+				"scopeName": "source.yaml",
+				"path": "./syntaxes/yaml.tmLanguage.json"
+			},
+			{
+				"language": "template-recipe",
+				"scopeName": "source.yaml",
+				"path": "./syntaxes/yaml.tmLanguage.json"
+			}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "RDTK configuration",
+			"properties": {
+				"rdtkls.generator-path": {
+					"type": [
+						"string",
+						"null"
+					],
+					"default": "/tmp/opt/build-generator/bin/build-generator",
+					"description": "Path to RDTK build-generator"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"vscode": "^1.1.35",
+		"@types/mocha": "^5.2.0",
+		"@types/node": "^8.0.0",
+		"typescript": "^3.0.0",
+		"vsce": "^1.0.0"
+	}
+}
