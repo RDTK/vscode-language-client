@@ -76,11 +76,8 @@
 			"title": "RDTK configuration",
 			"properties": {
 				"rdtkls.generator-path": {
-					"type": [
-						"string",
-						"null"
-					],
-					"default": "/tmp/opt/build-generator/bin/build-generator",
+					"type": "string",
+					"default": "/usr/bin/build-generator",
 					"description": "Path to RDTK build-generator"
 				}
 			}
