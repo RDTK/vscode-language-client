@@ -1,5 +1,4 @@
 
-import * as vscode from 'vscode';
 import { workspace } from 'vscode';
 
 import {
@@ -15,7 +14,7 @@ export function activate() {
 	console.log('Starting RDTKLS ...');
 
 	let serverBinary = "sh"
-	const bin = vscode.workspace.getConfiguration().get("rdtkls.generator-path")
+	const bin = workspace.getConfiguration().get("rdtkls.generator-path")
 	
 	let serverArguments = [ '-c', `LANG=C.UTF-8 BUILD_GENERATOR_CONFIG_FILES= ${bin} language-server` ];
 

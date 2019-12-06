@@ -1,26 +1,43 @@
 {
 	"name": "rdtkls",
+	"displayName": "RDTK",
 	"description": "RDTK language support - VSCode language client for RDTK recipes",
 	"author": "Leroy Ruegemer",
+	"contributors": [
+		{
+		  "name": "Leroy Ruegemer",
+		  "email": "lruegeme@techfak.de"
+		}
+	  ],
 	"license": "GPL-3.0-or-later",
-	"version": "0.0.2",
-	"publisher": "RDTK",
-	"repository": {
-		"type": "git",
-		"url": "TODO"
-	},
+	"version": "0.0.3",
 	"engines": {
 		"vscode": "^1.33.0"
 	},
+	"publisher": "rdtk",
+	"preview": true,
+	"bugs": "https://github.com/RDTK/vscode-language-client/issues",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/RDTK/vscode-language-client"
+	},
+	"categories": [
+		"Programming Languages",
+		"Linters"
+	],
+	"keywords": [
+		"rdtk",
+		"yaml",
+		"autocompletion",
+		"validation"
+	],
+	"icon": "images/icon.png",
 	"activationEvents": [
 		"onLanguage:project-recipe",
 		"onLanguage:distribution-recipe",
 		"onLanguage:template-recipe"
 	],
 	"main": "./out/extension",
-	"dependencies": {
-		"vscode-languageclient": "^5.2.1"
-	},
 	"contributes": {
 		"languages": [
 			{
@@ -89,6 +106,9 @@
 		"watch": "tsc -watch -p ./",
 		"pretest": "npm run compile",
 		"test": "node ./out/test/runTest.js"
+	},
+	"dependencies": {
+		"vscode-languageclient": "^5.2.1"
 	},
 	"devDependencies": {
 		"vscode": "^1.1.35",
