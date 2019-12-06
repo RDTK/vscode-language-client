@@ -4,6 +4,16 @@ RDTK Recipes Syntax Highlight and Language Client for vscode
 
 ## Install 
 
+### Marketplace
+
+https://marketplace.visualstudio.com/items?itemName=rdtk.rdtkls
+
+1. Launch VS Code Quick Open (Ctrl+P), paste the following command, and press enter:
+
+    `ext install RDTK.rdtkls`
+
+### Manual
+
 First, find the release that you wish to install at https://github.com/rdtk/vscode-language-client/releases. Then, download the rdtkls-*.vsix file for that release to your machine. Use the following steps to install the .vsix into Visual Studio Code.
 
 1. Open Visual Studio Code and select View->Extensions from the menu to display the Extensions pane.
