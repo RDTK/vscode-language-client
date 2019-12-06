@@ -3,7 +3,7 @@
 	"description": "RDTK language support - VSCode language client for RDTK recipes",
 	"author": "Leroy Ruegemer",
 	"license": "GPL-3.0-or-later",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"publisher": "RDTK",
 	"repository": {
 		"type": "git",
